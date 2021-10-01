@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class f {
+    public static void main(String[] args) {
+        Scanner vanshika=new Scanner(System.in);
+        int  a = vanshika.nextInt();
+        even(a);
+    }
+    static void even(int a)
+    {
+        if(a%2==0)
+        {
+            System.out.println("even");
+        }
+        else
+        {
+            System.out.println("odd");
+        }
+    }
+
+}
