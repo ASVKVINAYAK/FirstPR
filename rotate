@@ -1,0 +1,43 @@
+import java.util.*;
+public class ROTATE {
+	public static void rotateMatrix(List<List<Integer>> squareMatrix) {
+		final int matrixSize = squareMatrix.size() - 1;
+		for (int i = 0; i < (squareMatrix.size() / 2); ++i) {
+		for (int j = i; j < matrixSize - i; ++j) {
+		int temp1 = squareMatrix.get(matrixSize - j).get(i);
+		int temp2 = squareMatrix.get(matrixSize - i).get(matrixSize - j);
+		int temp3 = squareMatrix.get(j).get(matrixSize - i);
+		int temp4 = squareMatrix.get(i).get(j);
+		squareMatrix.get(i).set(j, temp1);
+		squareMatrix.get(matrixSize - j).set(i, temp2);
+		squareMatrix.get(matrixSize - i).set(matrixSize - j, temp3);
+		squareMatrix.get(j).set(matrixSize - i, temp4);
+		}
+		}
+		System.out.println("Array rotated by 90 degrees clockwise:");
+		for(int i=0;i<squareMatrix.size();i++) {
+			System.out.println(squareMatrix.get(i));
+		}
+		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the order of the matrix:");
+		int a=sc.nextInt();
+		System.out.println("Enter the elements:");
+		List<List<Integer>> b = new ArrayList<List<Integer>>();
+		for(int i=0;i<a;i++) {
+			b.add(new ArrayList<Integer>());
+			for(int j=0;j<a;j++) {
+				int n=sc.nextInt();
+				b.get(i).add(j,n);
+			}
+		}
+		System.out.println("The matrix is : ");
+		for(int i=0;i<a;i++) {
+		System.out.println(b.get(i));
+		}
+	    rotateMatrix(b);
+	}
+
+}
