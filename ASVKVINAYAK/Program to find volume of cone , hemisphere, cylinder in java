@@ -1,0 +1,85 @@
+import java.util.*;
+
+abstract class shape
+{
+ double l,r,h,b,vol;
+ abstract void cal_volume();
+}
+
+class hemisphere extends shape
+{
+ hemisphere(double r)
+ {
+  this.r=r;
+ }
+
+
+ 
+ void cal_volume()
+ {
+  vol=(4/3)*3.14*(r*r*r);
+  System.out.println("\nVolume of hemisphere:="+vol);
+ }
+}
+
+
+class cone extends shape
+{
+ cone(double r,double h)
+ {
+  this.r=r;
+  this.h=h;
+ }
+ 
+ 
+ void cal_volume()
+ {
+  vol=3.14*r*r*(h/3);
+  System.out.println("\nVolume of cone:="+vol);
+ }
+
+}
+
+class cylinder extends shape
+{
+ cylinder(double r,double h)
+ {
+  this.r=r;
+  this.h=h;
+ }
+ 
+ 
+ void cal_volume()
+ {
+  vol=3.14*r*r*h;
+  System.out.println("\nVolume of cylinder:="+vol);
+ }
+
+}
+
+class demo
+{
+ public static void main(String args[])
+ {
+  double r,h,b,l,ea,vol;
+  Scanner sc=new Scanner(System.in); 
+        
+                System.out.println("\nEnter radius,height,breadth,length:");
+  r=sc.nextDouble();
+  h=sc.nextDouble();
+  b=sc.nextDouble();
+  l=sc.nextDouble();
+  
+  shape s;
+ 
+  s=new hemisphere(r);
+  s.cal_volume();
+  
+  s=new cone(r,h);
+  s.cal_volume();
+
+  s=new cylinder(r,h);
+  s.cal_volume();
+ 
+ }
+}
