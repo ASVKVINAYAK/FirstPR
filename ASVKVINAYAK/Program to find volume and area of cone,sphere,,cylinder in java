@@ -1,0 +1,103 @@
+import java.util.*;
+
+abstract class shape
+{
+ double l,r,h,b,area,vol;
+ abstract void cal_area();
+ abstract void cal_volume();
+}
+
+class sphere extends shape
+{
+ sphere(double r)
+ {
+  this.r=r;
+ }
+
+ void cal_area()
+ {
+  area=4*3.14*r*r;
+  System.out.println("\nArea of sphere:="+area);
+ }
+ 
+ void cal_volume()
+ {
+  vol=(4/3)*3.14*r*r*r;
+  System.out.println("\nVolume of sphere:="+vol);
+ }
+}
+
+
+class cone extends shape
+{
+ cone(double r,double h)
+ {
+  this.r=r;
+  this.h=h;
+ }
+ 
+        void cal_area()
+ {
+  area=3.14*r*(r+java.lang.Math.sqrt((h*h)+(r*r)));
+  System.out.println("\nArea of cone:="+area);
+ }
+ 
+ void cal_volume()
+ {
+  vol=3.14*r*r*(h/3);
+  System.out.println("\nVolume of cone:="+vol);
+ }
+
+}
+
+class cylinder extends shape
+{
+ cylinder(double r,double h)
+ {
+  this.r=r;
+  this.h=h;
+ }
+ 
+        void cal_area()
+ {
+  area=(2*3.14*r+r)+(2*3.14*r+h);
+  System.out.println("\nArea of cylinder:="+area);
+ }
+ 
+ void cal_volume()
+ {
+  vol=3.14*r*r*h;
+  System.out.println("\nVolume of cylinder:="+vol);
+ }
+
+}
+
+class demo
+{
+ public static void main(String args[])
+ {
+  double r,h,b,l,ea,vol;
+  Scanner sc=new Scanner(System.in); 
+        
+                System.out.println("\nEnter radius,height,breadth,length:");
+  r=sc.nextDouble();
+  h=sc.nextDouble();
+  b=sc.nextDouble();
+  l=sc.nextDouble();
+  
+  shape s;
+ 
+  s=new sphere(r);
+  s.cal_area();
+  s.cal_volume();
+  
+  s=new cone(r,h);
+  s.cal_area();
+  s.cal_volume();
+
+  s=new cylinder(r,h);
+  s.cal_area();
+  s.cal_volume();
+ 
+ }
+}
