@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+import java.lang.Math.*;
+import java.io.*;
+
+class hello
+{
+     public static void main (String[] args) 
+    {
+     int n,i,t;
+     Scanner hi= new Scanner (System.in);
+     System.out.println("ENTER THE NUMBER OF WHICH YOU WANT TABLE");
+     n= hi.nextInt();
+     for(i=1;i<11;i++)
+     {
+         t=n*i;
+         System.out.println(t);
+     }
+     
+    }
+}
