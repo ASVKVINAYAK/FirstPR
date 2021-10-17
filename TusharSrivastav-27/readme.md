@@ -1,6 +1,6 @@
 # Voice_Assistant
 
-In this Project I have made two assistant named *HP and JARVIS* who will help us to do our work using speech recognition. 
+In this Project I have made two assistant named *HP(Female) and JARVIS(Male)* who will help us to do our work using speech recognition. 
 They can play songs,movies and videos for you. 
 They can also tell you about weather, maps, search different things for you on the internet and many more things. 
 They can also type in a text file for you just by listening to you and will save it. 
