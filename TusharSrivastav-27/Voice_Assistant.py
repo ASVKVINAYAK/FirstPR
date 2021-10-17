@@ -42,7 +42,7 @@ while True:
 
  query=takecommand().lower()
  if 'activate' in query:
-   pyttsx3.speak("activating Jarvis sir")
+   pyttsx3.speak("activating jarvis sir")
 
    converter=pyttsx3.init()
 
