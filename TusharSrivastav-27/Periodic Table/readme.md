@@ -15,4 +15,5 @@ You have to enter value inside black box.
 Then you can see different elements according to their group and also in detail.
 
 These are the pictures from the project:-
+![image](https://user-images.githubusercontent.com/71928146/138316969-b807d57c-69ce-4da1-a0bb-8bf036d46850.png)
 
