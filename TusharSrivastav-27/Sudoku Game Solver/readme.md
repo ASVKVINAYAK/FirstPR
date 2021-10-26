@@ -22,3 +22,5 @@ Functions :
 6- duplicate(): It checks for duplicate value in a row and column and remove it.
 
 7- missingGrid(): It fills the whole subgrid of 3x3 with missing number in that subgrid.
+
+8- checkGrid(): It checks the grid value 0 values in unwanted places.
