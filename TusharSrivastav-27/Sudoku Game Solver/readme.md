@@ -12,3 +12,9 @@ Functions :
 1- main(): It takes the input by the user in 9x9 matrix. It also calls other functions which are described below.
 
 2- isSudokuSolved(): Checks if sudoku is solved or not.
+
+3- disp(): Displays the whole 9x9 grid.
+
+4- remove(): Removes elements/number which is greater than 9.
+
+5- dupGrid(): It checks for the duplicate value in a sub grid of 3x3 and remove it.
