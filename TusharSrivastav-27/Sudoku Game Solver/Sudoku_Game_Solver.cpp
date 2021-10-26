@@ -217,3 +217,38 @@ int checkGrid(int grid[9][9]){      //for checking the grid for 0 values in unwa
     }
     return 1;
 }
+int main(){
+    int grid[9][9];
+    cout << "enter the puzzle (9x9 matrix) and empty space as 0." << endl;
+    for(int i=0;i<9;i++)        //for input of the 9x9 grid
+    {
+        for(int j=0;j<9;j++)
+        {
+            cin >> grid[i][j];
+            if(grid[i][j] <0 || grid[i][j] >9)
+            {
+                cout << "entered no. is not between 0-9!";
+                return -1;
+            }
+        }
+    }
+    checkGrid(grid);
+    for(int i=0; i<9;i++) //passing each subgrid to fill the missing values
+    {                       //for eg if the subgrid is missing 1,7,8,4 then it will replace all the subgrid zeroes with 1784 as a whole no.
+        missingInGrid(grid, i); //i could be from 0 to 8 representing each subgrid
+    }
+    for(int i=0;i<6;i++)
+    {
+        duplicate(grid);
+        for(int i=0; i<9;i++)
+        {
+            dupGrid(grid, i);
+        }
+        if(isSudokuSolved(grid))
+        {
+            break;
+        }
+    }
+    disp(grid);
+    return 0;
+}
