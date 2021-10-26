@@ -40,3 +40,17 @@ void disp(int grid[9][9]){      //for displaying the whole 9x9 grid
         cout << endl;
     }
 }
+void remove(int *n, int k){     //removing an element from no greater than 9 eg n=123 k=2 resulting value of n=13
+    int c=-1, m=0, no=(*n);
+    while(no){
+        c++;
+        if(no%10 == k)
+        {
+            no/=10;
+            (*n)=no*((int)pow(10,c))+m;
+            return;
+        }
+        m = m+(no%10*pow(10,c));
+        no/=10;
+    }
+}
