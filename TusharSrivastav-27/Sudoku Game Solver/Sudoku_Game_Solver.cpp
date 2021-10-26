@@ -54,3 +54,49 @@ void remove(int *n, int k){     //removing an element from no greater than 9 eg 
         no/=10;
     }
 }
+void dupGrid(int grid[9][9], int n){    //checks for duplicate value in a sub grid of 3x3 and for removing it
+    int hs, vs, no=0, k=0;
+    switch(n){
+        case 0: hs=0; vs=0;
+        break;
+        case 1: hs=3; vs=0;
+        break;
+        case 2: hs=6; vs=0;
+        break;
+        case 3: hs=0; vs=3;
+        break;
+        case 4: hs=3; vs=3;
+        break;
+        case 5: hs=6; vs=3;
+        break;
+        case 6: hs=0; vs=6;
+        break;
+        case 7: hs=3; vs=6;
+        break;
+        case 8: hs=6; vs=6;
+    }
+    for(int i=vs;i<vs+3;i++)
+    {
+        for(int j=hs;j<hs+3;j++)
+        {
+            if(grid[i][j]<10)
+            {
+                no=(no*10)+grid[i][j];
+            }
+        }
+    }
+    for(int i=vs;i<vs+3;i++)
+    {
+        for(int j=hs;j<hs+3;j++)
+        {
+            if(grid[i][j]>9)
+            {
+                k=no;
+                while(k){
+                    remove((&grid[i][j]), (k%10));
+                    k/=10;
+                }
+            }
+        }
+    }
+}
