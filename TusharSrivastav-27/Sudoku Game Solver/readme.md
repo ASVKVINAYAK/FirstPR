@@ -10,3 +10,5 @@ Concept Used : Backtracking
 Functions :
 
 1- main(): It takes the input by the user in 9x9 matrix. It also calls other functions which are described below.
+
+2- isSudokuSolved(): Checks if sudoku is solved or not.
