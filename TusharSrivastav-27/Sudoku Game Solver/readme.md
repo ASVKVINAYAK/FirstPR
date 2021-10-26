@@ -8,3 +8,5 @@ Language Used : c++
 Concept Used : Backtracking
 
 Functions :
+
+1- main(): It takes the input by the user in 9x9 matrix. It also calls other functions which are described below.
