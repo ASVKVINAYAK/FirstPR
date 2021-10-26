@@ -172,3 +172,48 @@ void missingInGrid(int grid[9][9], int n){ //fills the whole subgrid of 3x3 with
     }
 
 }
+int checkGrid(int grid[9][9]){      //for checking the grid for 0 values in unwanted places
+    try{
+        for(int i=0;i<9;i++)
+        {
+            int chkh[10]={0}, chkv[10]={0};
+            for(int j=0;j<9;j++)
+            {
+                chkh[grid[i][j]]++;
+                chkv[grid[j][i]]++;
+            }
+            if(chkh[0] == 9)
+            {
+                throw(0);
+            }
+            if(chkv[0] == 9)
+            {
+                throw(1);
+            }
+            for(int j=1;j<10;j++)
+            {
+                if(chkh[j] > 1)
+                {
+                    throw(2);
+                }
+                if(chkv[j] > 1)
+                {
+                    throw(3);
+                }
+            }
+        }
+    }
+    catch(int e){
+        switch(e){
+            case 0: cout << "row error: empty row!" << endl;
+            break;
+            case 1: cout << "column error: empty column!" << endl;
+            break;
+            case 2: cout << "row error: duplicate number in same row!" << endl;
+            break;
+            case 3: cout << "column error: duplicate number in same column!" << endl;
+        }
+        return -1;
+    }
+    return 1;
+}
