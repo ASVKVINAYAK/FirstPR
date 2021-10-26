@@ -122,3 +122,53 @@ void duplicate(int grid[9][9]){     //checks for duplicate value in a row and co
         }
     }
 }
+void missingInGrid(int grid[9][9], int n){ //fills the whole subgrid of 3x3 with missing no in that subgrid
+    int hs, vs, c[9]={0}, no=0;
+    switch(n){
+        case 0: hs=0; vs=0;
+        break;
+        case 1: hs=3; vs=0;
+        break;
+        case 2: hs=6; vs=0;
+        break;
+        case 3: hs=0; vs=3;
+        break;
+        case 4: hs=3; vs=3;
+        break;
+        case 5: hs=6; vs=3;
+        break;
+        case 6: hs=0; vs=6;
+        break;
+        case 7: hs=3; vs=6;
+        break;
+        case 8: hs=6; vs=6;
+    }
+    for(int i=vs;i<vs+3;i++)
+    {
+        for(int j=hs;j<hs+3;j++)
+        {
+            if(grid[i][j]!=0)
+            {
+                c[(grid[i][j])-1]++;
+            }
+        }
+    }
+    for(int i=0;i<9;i++)
+    {
+        if(c[i]==0)
+        {
+            no = (no*10) + (i+1);
+        }
+    }
+    for(int i=vs;i<vs+3;i++)
+    {
+        for(int j=hs;j<hs+3;j++)
+        {
+            if((grid[i][j])==0)
+            {
+                (grid[i][j]) = no;
+            }
+        }
+    }
+
+}
