@@ -100,3 +100,25 @@ void dupGrid(int grid[9][9], int n){    //checks for duplicate value in a sub gr
         }
     }
 }
+void duplicate(int grid[9][9]){     //checks for duplicate value in a row and col and for removing it 
+    for(int i=0;i<9;i++)
+    {
+        for(int j=0;j<9;j++)
+        {
+            if(grid[i][j] < 10)
+            {
+                for(int k=0;k<9;k++)
+                {
+                    if(grid[i][k]>9)
+                    {
+                        remove(&grid[i][k], grid[i][j]);
+                    }
+                    if(grid[k][j]>9)
+                    {
+                        remove(&grid[k][j], grid[i][j]);
+                    }
+                }
+            }
+        }
+    }
+}
