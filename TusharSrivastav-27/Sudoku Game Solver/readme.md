@@ -18,3 +18,7 @@ Functions :
 4- remove(): Removes elements/number which is greater than 9.
 
 5- dupGrid(): It checks for the duplicate value in a sub grid of 3x3 and remove it.
+
+6- duplicate(): It checks for duplicate value in a row and column and remove it.
+
+7- missingGrid(): It fills the whole subgrid of 3x3 with missing number in that subgrid.
