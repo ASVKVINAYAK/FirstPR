@@ -4,3 +4,5 @@ About: In this project I have created a program to rotate an image without cropp
        degree taken by user.
 
 Tools Required: Visual Studio 2019,OpenCV
+
+Language Used : c++
