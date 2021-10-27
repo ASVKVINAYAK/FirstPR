@@ -31,3 +31,8 @@ int main() {
 		cout << endl << "  >> ERROR LOADING THE IMAGE !" << endl;
 		return -1;
 	}
+	
+	double angle;
+	cout << endl << "  >> Enter the angle of rotation of image: ";
+	cin >> angle;
+	cout << endl << "  >> The image is being displayed..." << endl;
