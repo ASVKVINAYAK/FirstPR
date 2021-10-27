@@ -8,3 +8,5 @@ Tools Required: Visual Studio 2019,OpenCV
 Language Used : c++
 
 Functions :
+
+1-main(): It will take angle for rotation as an input from user.
