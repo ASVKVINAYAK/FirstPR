@@ -15,3 +15,10 @@ void rotateImage(double angle, Mat &image) {
 	
 	Mat rotated;
 	warpAffine(image, rotated, rot, bbox.size());
+	
+	string window_name = "The Car !";
+	namedWindow(window_name, WINDOW_NORMAL);
+	imshow(window_name, rotated);
+	waitKey(0);
+	destroyWindow(window_name);
+}
