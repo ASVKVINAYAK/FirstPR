@@ -36,3 +36,7 @@ int main() {
 	cout << endl << "  >> Enter the angle of rotation of image: ";
 	cin >> angle;
 	cout << endl << "  >> The image is being displayed..." << endl;
+	
+	rotateImage(angle, image);
+	return 0;
+}
