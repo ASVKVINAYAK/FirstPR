@@ -12,3 +12,6 @@ void rotateImage(double angle, Mat &image) {
 	Rect2f bbox = RotatedRect(Point2f(), image.size(), angle).boundingRect2f();
 	rot.at<double>(0, 2) += bbox.width / 2.0 - image.cols / 2.0;
 	rot.at<double>(1, 2) += bbox.height / 2.0 - image.rows / 2.0;
+	
+	Mat rotated;
+	warpAffine(image, rotated, rot, bbox.size());
