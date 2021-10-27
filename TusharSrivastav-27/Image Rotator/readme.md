@@ -6,3 +6,5 @@ About: In this project I have created a program to rotate an image without cropp
 Tools Required: Visual Studio 2019,OpenCV
 
 Language Used : c++
+
+Functions :
