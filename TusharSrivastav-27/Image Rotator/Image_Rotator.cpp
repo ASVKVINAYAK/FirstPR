@@ -22,3 +22,7 @@ void rotateImage(double angle, Mat &image) {
 	waitKey(0);
 	destroyWindow(window_name);
 }
+
+int main() {
+	string source = "D:\\Study\\VS-VS Code\\OpenCV test\\Car2.jpg";
+	Mat image = imread(source, IMREAD_UNCHANGED);
