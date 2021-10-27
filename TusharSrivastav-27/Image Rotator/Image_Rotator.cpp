@@ -26,3 +26,8 @@ void rotateImage(double angle, Mat &image) {
 int main() {
 	string source = "D:\\Study\\VS-VS Code\\OpenCV test\\Car2.jpg";
 	Mat image = imread(source, IMREAD_UNCHANGED);
+	
+	if (image.empty()) {
+		cout << endl << "  >> ERROR LOADING THE IMAGE !" << endl;
+		return -1;
+	}
