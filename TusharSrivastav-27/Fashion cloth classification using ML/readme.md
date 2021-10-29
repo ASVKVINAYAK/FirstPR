@@ -4,3 +4,24 @@ In this project Fashion_Cloth_Classification I have have used Fashion MNIST Data
 It works according to the table given by MNIST_Fashion:
 
 Table:-
+
+0 ->	    T-shirt/top
+
+1 ->	    Trouser
+
+2 ->	    Pullover
+
+3 ->	    Dress
+
+4 ->	    Coat
+
+5 ->	    Sandal
+
+6 ->	    Shirt
+
+7 ->	    Sneaker
+
+8 ->	    Bag
+
+9 ->	    Ankle boot
+
