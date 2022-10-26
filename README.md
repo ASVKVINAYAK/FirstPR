@@ -1,4 +1,4 @@
-<h1 align="center">Hacktoberfest 2021</h1>
+<h1 align="center">Hacktoberfest 2022</h1>
 <p align="center">
     <a href="https://github.com/digitalocean/hacktoberfest/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/HacOkars/Hacktoberfest-2021"></a>
     <a href="https://github.com/digitalocean/hacktoberfest/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HacOkars/Hacktoberfest-2021"></a>
@@ -15,6 +15,7 @@
 ### Get Started With your first Contrinution/Pull Request :
 
 
+Steps for hacktoberfest 2022 guidelines for smooth PR acceptence
 Fork/Copy the repo by clicking the right most button on top of the page.
 
 Go to your own repository list and find the forked repository.
